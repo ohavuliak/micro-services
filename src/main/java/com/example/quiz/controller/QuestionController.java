@@ -1,7 +1,6 @@
 package com.example.quiz.controller;
 
 import com.example.quiz.dto.QuestionDTO;
-import com.example.quiz.dto.QuizDTO;
 import com.example.quiz.mapper.QuestionMapper;
 import com.example.quiz.service.QuestionService;
 import io.swagger.v3.oas.annotations.tags.Tag;

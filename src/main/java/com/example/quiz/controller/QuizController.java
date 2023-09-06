@@ -25,8 +25,7 @@ public class QuizController {
 
     private final QuizService quizService;
     private final QuizMapper quizMapper;
-    private final QuestionService questionService;
-    private final QuestionMapper questionMapper;
+
 
     @PostMapping()
     public ResponseEntity<QuizDTO> createQuiz(@RequestBody QuizRequest request) {
