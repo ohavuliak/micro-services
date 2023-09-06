@@ -8,6 +8,7 @@ import com.example.quiz.model.QuestionWrapper;
 import com.example.quiz.service.QuestionService;
 import com.example.quiz.service.QuizService;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
@@ -28,7 +29,7 @@ public class QuizController {
 
 
     @PostMapping()
-    public ResponseEntity<QuizDTO> createQuiz(@RequestBody QuizRequest request) {
+    public ResponseEntity<QuizDTO> createQuiz(@Valid @RequestBody QuizRequest request) {
         log.info("Adding a new quiz");
         return ResponseEntity.ok(quizMapper.toDto(quizService.createQuiz(request)));
     }
